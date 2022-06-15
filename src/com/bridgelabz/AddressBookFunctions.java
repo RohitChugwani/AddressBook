@@ -2,7 +2,12 @@ package com.bridgelabz;
 
 import java.util.Scanner;
 
-public class AddressBookFunctions {
+public class AddressBookFunctions extends Main {
+
+    AddressBookFunctions()
+    {
+
+    }
 
     String firstName;
     String lastName;
@@ -55,5 +60,39 @@ public class AddressBookFunctions {
         System.out.println("enter zip code");
         zip = scn.next();
 
+    }
+    void edit(String firstName)
+    {
+        for(int i=0;i< database.size();i++)
+        {
+            if(database.get(i).firstName == firstName)
+            {
+                System.out.println("Current details are");
+                this.show();
+
+                Scanner scn = new Scanner(System.in);
+                System.out.println("enter first name");
+                database.get(i).firstName= scn.next();
+                System.out.println("enter last name");
+                database.get(i).lastName= scn.next();
+                System.out.println("enter Address");
+                database.get(i).address= scn.next();
+                System.out.println("enter City");
+                database.get(i).city= scn.next();
+                System.out.println("enter State");
+                database.get(i).state= scn.next();
+                System.out.println("enter mobile number ");
+                database.get(i).contactNumber= scn.next();
+                System.out.println("enter email id");
+                database.get(i).emailId= scn.next();
+                System.out.println("enter zip code");
+                database.get(i).zip= scn.next();
+                System.out.println("updated details are");
+                this.show();
+
+
+
+            }
+        }
     }
 }
