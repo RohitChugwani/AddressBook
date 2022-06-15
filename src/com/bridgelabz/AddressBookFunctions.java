@@ -1,5 +1,7 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class AddressBookFunctions {
 
     String firstName;
@@ -31,6 +33,27 @@ public class AddressBookFunctions {
         System.out.println("Contact number :" +contactNumber);
         System.out.println("EmailId:" +emailId);
         System.out.println("Zip:" +zip);
+
+    }
+    void createContact()
+    {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("enter first name");
+        firstName = scn.next();
+        System.out.println("enter last name");
+        lastName = scn.next();
+        System.out.println("enter Address");
+        address = scn.next();
+        System.out.println("enter City");
+        city = scn.next();
+        System.out.println("enter State");
+        state = scn.next();
+        System.out.println("enter mobile number ");
+        contactNumber = scn.next();
+        System.out.println("enter email id");
+        emailId = scn.next();
+        System.out.println("enter zip code");
+        zip = scn.next();
 
     }
 }
